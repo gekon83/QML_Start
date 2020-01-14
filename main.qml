@@ -8,6 +8,7 @@ Window {
     height: 480
     title: qsTr("Hello World")
 
+    /*
     Button {
         text: "Close"
         highlighted: true
@@ -26,4 +27,22 @@ Window {
 
         onTriggered: Qt.quit()
     }
+    /**/
+    Row {
+           anchors.centerIn: parent
+           spacing: 10
+
+           TextField {
+               id: textField
+
+               width: 200
+           }
+
+           Button {
+               id: button
+
+               width: 200
+               text: textField.text
+           }
+       }
 }
